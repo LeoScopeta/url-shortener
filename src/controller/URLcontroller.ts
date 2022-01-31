@@ -5,5 +5,6 @@ export class URLController {
 	public async shorten(req: Request, response: Response): Promise<void> {
 		const { originURL } = req.body
 		const hash = shortId.generate()
+        const shortURL = `${config.API_URL}/${hash}`
 	}
 }
