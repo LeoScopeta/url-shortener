@@ -6,5 +6,6 @@ export class URLController {
 		const { originURL } = req.body
 		const hash = shortId.generate()
         const shortURL = `${config.API_URL}/${hash}`
+        response.json({  originURL, hash, shortURL})
 	}
 }
